@@ -60,6 +60,7 @@ void setup()
       digitalWrite(MOTBomba,status);
       WSerial.println(status? "MOTBomba ON" :"MOTBomba OFF"); 
     }
+  );
 }
 
 void loop()
