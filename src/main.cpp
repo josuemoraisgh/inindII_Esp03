@@ -18,7 +18,7 @@ void monitoraPOT(void) {
     ledcWrite(POSValvula, vlPOT1);    
     const uint16_t vlPOT2 = analogRead(def_pin_POT2);
 
-    InIndKit.setDisplayText(2, ("P1:" + String(vlPOT1) + "  P2:" + String(vlPOT2)).c_str());
+    InIndKit.setDisplayText(2, ("P1:" + String(100.0*vlPOT1/4096.0) + "  P2:" + String(100.0*vlPOT2/4096.0)).c_str());
     
     WSerial.plot("vlPOT1", vlPOT1);
     WSerial.plot("vlPOT2", vlPOT2);
