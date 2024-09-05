@@ -3,7 +3,7 @@
 
 void setup()
 {
-    InIndKit.setup();
+    InIndKit.setup(115200);
 }
 
 void loop()

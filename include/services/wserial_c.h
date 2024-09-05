@@ -13,7 +13,8 @@ protected:
 public:
   bool telnetStart(uint16_t server_port);
   bool telnetStart() { return server_port != 0 ? (telnetStart(server_port)): false; }
-  WSerial_c() { Serial.begin(115200);}
+  WSerial_c() {}
+  void begin(const unsigned long baud) { Serial.begin(baud);}
   template <typename T>
   void plot(const char *varName, T x, T y, const char *unit = NULL);
   template <typename T>
